@@ -1,4 +1,5 @@
 import { useAudio as useAudioHook } from "react-use";
+import { logPlayerState } from "../../utils";
 
 export function useAudio({ name, url }) {
   const [audio, state, controls, ref] = useAudioHook({
@@ -6,10 +7,16 @@ export function useAudio({ name, url }) {
     autoPlay: false
   });
   const play = () => {
-    controls.play();
+    if (state.paused) {
+      controls.play();
+      logPlayerState(true);
+    }
   };
   const pause = () => {
-    controls.pause();
+    if (!state.paused) {
+      controls.pause();
+      logPlayerState(false);
+    }
   };
   const volume = (newVolume = null) => {
     if (!newVolume) {
@@ -22,5 +29,5 @@ export function useAudio({ name, url }) {
     // setter
     controls.volume(newVolume);
   };
-  return { audio, play, pause, audioState: state, volume };
+  return { audio, play, pause, audioState: state, volume, controls };
 }

@@ -9,7 +9,8 @@
     "react-dom": "16.12.0",
     "react-scripts": "3.0.1",
     "react-use": "13.27.1",
-    "store": "2.0.12"
+    "store": "2.0.12",
+    "styled-components": "^5.0.1"
   },
   "devDependencies": {
     "typescript": "3.3.3"

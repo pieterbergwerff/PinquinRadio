@@ -1,11 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { usePinquinRadio } from "./hooks";
 import { PlayPause, PlayIcon, PauseIcon } from "./components";
 import "./style";
-
-function Volume(props) {
-  return <input {...props} type="range" min="0" max="100" />;
-}
 
 export function PinquinRadio() {
   const {
@@ -15,15 +11,15 @@ export function PinquinRadio() {
     stations,
     selectedStation,
     setSelectedStation,
-    audioState,
-    volume
+    audioState
   } = usePinquinRadio();
 
-  //console.log(selectedStation);
   const [color1, color2] = selectedStation.colors;
-  //console.log(color1, color2);
+
   const style = {
     color: selectedStation.color,
+    WebkitTransition: "all 0.3s ease-in-out",
+    transition: "all 0.3s ease-in-out",
     backgroundImage: `linear-gradient(
     to top,
     ${color1},
@@ -33,12 +29,14 @@ export function PinquinRadio() {
 
   return (
     <>
-      {audio}
       <div className="PinquinRadio" style={style}>
         <main className="container player">
           <img
             src={`images/logos/${selectedStation.id}.svg`}
-            style={{ marginRight: "16px", height: "100%" }}
+            style={{
+              marginRight: "16px",
+              height: "100%"
+            }}
             alt="logo"
           />
           <div style={{ marginLeft: "16px", color: "black" }}>
@@ -58,8 +56,8 @@ export function PinquinRadio() {
                     pause();
                   }
                 }}
-                play={<PlayIcon style={{ height: "100%" }} />}
-                pause={<PauseIcon style={{ height: "100%" }} />}
+                play={<PlayIcon color={color1} style={{ height: "100%" }} />}
+                pause={<PauseIcon style={{ height: "100%" }} color={color1} />}
               />
             </div>
             <div>
@@ -116,59 +114,7 @@ export function PinquinRadio() {
           </li>
         </ul>
       </div>
-    </>
-  );
-
-  return (
-    <>
       {audio}
-      Now playing: Pinquin {selectedStation.name}
-      <div
-        style={{
-          display: "relative",
-          width: "100%",
-          height: "100%",
-          backgroundColor: "green"
-        }}
-      >
-        <div style={{ zIndex: 50 }}>
-          <img src={`images/logos/${selectedStation.id}.svg`} height="300" />
-        </div>
-        <div style={{ zIndex: 100 }}>
-          <PlayPause
-            defaultIsPlaying={!audioState.paused}
-            onChange={isPlaying => {
-              if (isPlaying) {
-                play();
-              } else {
-                pause();
-              }
-            }}
-            play={<PlayIcon />}
-            pause={<PauseIcon />}
-          />
-        </div>
-      </div>
-      <hr />
-      <Volume
-        value={volume() * 100}
-        onChange={e => volume(e.target.value / 100)}
-      />
-      <hr />
-      <ul>
-        {stations.stations.map(station => {
-          const key = `StationsListKey${station.id}`;
-          const _clickHandler = () => {
-            setSelectedStation(station.id);
-          };
-          return (
-            <li key={key} onClick={_clickHandler}>
-              {station.name}
-            </li>
-          );
-        })}
-      </ul>
-      <pre>{JSON.stringify(audioState, null, 2)}</pre>
     </>
   );
 }

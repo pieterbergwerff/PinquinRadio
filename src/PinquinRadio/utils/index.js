@@ -21,3 +21,11 @@ export function logSelectedStation(selectedStationId) {
   stationStats[selectedStationId]++;
   store.set("stats", stationStats);
 }
+
+export function getLoggedPlayerState() {
+  return store.get("playerState");
+}
+
+export function logPlayerState(isPlaying = false) {
+  store.set("playerState", isPlaying);
+}

@@ -7,7 +7,9 @@ export function usePinquinRadio({ defaultSelectedStation = "indie" } = {}) {
   const { selectedStation, setSelectedStation } = useSelectedStation({
     defaultSelectedStation
   });
-  const { audio, audioState, pause, play, volume } = useAudio(selectedStation);
+  const { audio, audioState, pause, play, volume, controls } = useAudio(
+    selectedStation
+  );
   return {
     audio,
     pause,
@@ -16,6 +18,7 @@ export function usePinquinRadio({ defaultSelectedStation = "indie" } = {}) {
     stations: sortStationsByPopularity(stations),
     selectedStation,
     setSelectedStation,
-    volume
+    volume,
+    controls
   };
 }
