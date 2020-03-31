@@ -1,0 +1,190 @@
+.PinquinRadio {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-overflow-scrolling: touch;
+  margin: 0;
+  padding-top: 203px;
+  padding-left: 32px;
+  padding-right: 32px;
+  overflow-y: auto;
+}
+
+.PinquinRadio main {
+  display: block;
+}
+
+.PinquinRadio h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.PinquinRadio hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+.PinquinRadio pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+.PinquinRadio a {
+  background-color: transparent;
+}
+
+.PinquinRadio abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+.PinquinRadio b,
+.PinquinRadio strong {
+  font-weight: bolder;
+}
+
+.PinquinRadio code,
+.PinquinRadio kbd,
+.PinquinRadio samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+.PinquinRadio small {
+  font-size: 80%;
+}
+
+.PinquinRadio sub,
+.PinquinRadio sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.PinquinRadio sub {
+  bottom: -0.25em;
+}
+
+.PinquinRadio sup {
+  top: -0.5em;
+}
+
+.PinquinRadio img {
+  border-style: none;
+}
+
+.PinquinRadio button,
+.PinquinRadio input,
+.PinquinRadio optgroup,
+.PinquinRadio select,
+.PinquinRadio textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+.PinquinRadio button,
+.PinquinRadio input {
+  /* 1 */
+  overflow: visible;
+}
+
+.PinquinRadio button,
+.PinquinRadio select {
+  /* 1 */
+  text-transform: none;
+}
+
+.PinquinRadio button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+.PinquinRadio button::-moz-focus-inner,
+.PinquinRadio [type="button"]::-moz-focus-inner,
+.PinquinRadio [type="reset"]::-moz-focus-inner,
+.PinquinRadio [type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+.PinquinRadio button:-moz-focusring,
+.PinquinRadio [type="button"]:-moz-focusring,
+.PinquinRadio [type="reset"]:-moz-focusring,
+.PinquinRadio [type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+.PinquinRadio fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+.PinquinRadio legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+.PinquinRadio progress {
+  vertical-align: baseline;
+}
+
+.PinquinRadio textarea {
+  overflow: auto;
+}
+
+.PinquinRadio [type="checkbox"],
+.PinquinRadio [type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+.PinquinRadio [type="number"]::-webkit-inner-spin-button,
+.PinquinRadio [type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+.PinquinRadio [type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+.PinquinRadio [type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+.PinquinRadio ::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+.PinquinRadio details {
+  display: block;
+}
+
+.PinquinRadio summary {
+  display: list-item;
+}
+
+.PinquinRadio template {
+  display: none;
+}
+
+.PinquinRadio [hidden] {
+  display: none;
+}
