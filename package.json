@@ -6,6 +6,7 @@
   "main": "src/index.js",
   "dependencies": {
     "@babel/core": "7.4.3",
+    "@rooks/use-did-mount": "^3.6.0",
     "@svgr/webpack": "4.1.0",
     "@typescript-eslint/eslint-plugin": "1.6.0",
     "@typescript-eslint/parser": "1.6.0",
@@ -69,7 +70,8 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "deploy": "npm run build && serve -s build"
   },
   "browserslist": [
     ">0.2%",

@@ -5,7 +5,7 @@ export const stations = [
     url: {
       mp3: "//streams.pinguinradio.com/PinguinRadio192.mp3"
     },
-    colors: ["#F08A05", "#ffffff"],
+    colors: ["#F08A05", "#E20D18"],
     color: "black"
   },
   {
@@ -14,7 +14,7 @@ export const stations = [
     url: {
       mp3: "//streams.pinguinradio.com/PinguinClassics192.mp3"
     },
-    colors: ["#FFDD08", "#ffffff"],
+    colors: ["#FFDD08", "#E20D18"],
     color: "black"
   },
   {
@@ -32,7 +32,7 @@ export const stations = [
     url: {
       mp3: "//samcloud.spacial.com/api/listen?sid=98586&m=sc&rid=174409"
     },
-    colors: ["#F088B6", "#fff"],
+    colors: ["#F088B6", "#E20D18"],
     color: "black"
   },
   {
@@ -41,7 +41,7 @@ export const stations = [
     url: {
       mp3: "//samcloud.spacial.com/api/listen?sid=98587&m=sc&rid=174412"
     },
-    colors: ["#A3A535", "#fff"],
+    colors: ["#A3A535", "#E20D18"],
     color: "black"
   },
   {
@@ -50,7 +50,7 @@ export const stations = [
     url: {
       mp3: "//samcloud.spacial.com/api/listen?sid=98569&m=sc&rid=174384"
     },
-    colors: ["#E30613", "#fff"],
+    colors: ["#E30613", "#E20D18"],
     color: "black"
   },
   {
@@ -68,7 +68,7 @@ export const stations = [
     url: {
       mp3: "//19293.live.streamtheworld.com/SP_R2292843_SC"
     },
-    colors: ["#5D514C", "#fff"],
+    colors: ["#5D514C", "#E20D18"],
     color: "black"
   },
   {
@@ -86,7 +86,7 @@ export const stations = [
     url: {
       mp3: "//samcloud.spacial.com/api/listen?sid=98570&m=sc&rid=174387"
     },
-    colors: ["#41A535", "#fff"],
+    colors: ["#41A535", "#E20D18"],
     color: "black"
   },
   {

@@ -1,10 +1,14 @@
 import { stations } from "../../data";
 import { useAudio } from "./useAudio";
 import { useSelectedStation } from "./useSelectedStation";
-import { sortStationsByPopularity } from "../../utils";
+import { sortStationsByPopularity, getLoggedPlayerState } from "../../utils";
 
 export function usePinquinRadio({ defaultSelectedStation = "indie" } = {}) {
-  const { selectedStation, setSelectedStation } = useSelectedStation({
+  const {
+    selectedStation,
+    setSelectedStation,
+    selectedStationTotalAirtimeStr
+  } = useSelectedStation({
     defaultSelectedStation
   });
   const { audio, audioState, pause, play, volume, controls } = useAudio(
@@ -19,6 +23,7 @@ export function usePinquinRadio({ defaultSelectedStation = "indie" } = {}) {
     selectedStation,
     setSelectedStation,
     volume,
-    controls
+    controls,
+    selectedStationTotalAirtimeStr
   };
 }

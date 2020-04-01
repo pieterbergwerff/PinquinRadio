@@ -28,5 +28,8 @@ export function useSelectedStation({ defaultSelectedStation = "indie" }) {
 
   const selectedStation = stations.getById(selectedStationId);
 
-  return { selectedStation, setSelectedStation };
+  return {
+    selectedStation,
+    setSelectedStation
+  };
 }
